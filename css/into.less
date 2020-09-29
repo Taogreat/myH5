@@ -1,0 +1,181 @@
+.transparent(@tmd:0.75,@tmd2:75)
+{
+    opacity:@tmd;
+    -moz-opacity:@tmd;
+    -khtml-opacity: @tmd;
+    filter:alpha(opacity=@tmd2);
+}
+.background-size(@bjdx:100%,@bjdx2:100%)
+{
+    -webkit-background-size: @bjdx @bjdx2;           /* Safari 3.0 */
+    -moz-background-size: @bjdx @bjdx2;           /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: @bjdx @bjdx2;           /* Opera 9.5 */
+    background-size: @bjdx @bjdx2;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+
+}
+.background-size2(@bjdx:100%)
+{
+    -webkit-background-size: @bjdx;           /* Safari 3.0 */
+    -moz-background-size: @bjdx;           /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: @bjdx;           /* Opera 9.5 */
+    background-size: @bjdx;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+
+}
+.fillet(@yjds:0.5rem)
+{
+    border-radius: @yjds;
+    -webkit-border-radius:@yjds;
+    -moz-border-radius: @yjds;
+}
+.shadow(@yy1:0,@yy2:0,@yy3:8px,@yy4:rgba(0, 0, 0, 0.17))
+{
+    -webkit-box-shadow: @yy1 @yy2 @yy3 @yy4;
+    box-shadow: @yy1 @yy2 @yy3 @yy4;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=@yy4,direction=@yy1,strength=@yy3);/*兼容ie*/
+    -moz-box-shadow: @yy1 @yy2 @yy3 @yy4;/*兼容firefox*/
+}
+.box-shadow(@yy1:0,@yy2:0,@yy3:8px,@yy4:rgba(0, 0, 0, 0.17))
+{
+    -moz-box-shadow:@yy1 @yy2 @yy3 @yy4 inset;               /* For Firefox3.6+ */
+    -webkit-box-shadow:@yy1 @yy2 @yy3 @yy4 inset;            /* For Chrome5+, Safari5+ */
+    box-shadow:@yy1 @yy2 @yy3 @yy4 inset;                    /* For Latest Opera */
+}
+.placeholder(@mrys:#bbbbbb,@mrdx:0.12rem)
+{
+    &::-webkit-input-placeholder
+    {
+        color: @mrys;
+        font-size: @mrdx;
+    }
+    &:-moz-placeholder
+    {
+        color: @mrys;
+        font-size: @mrdx;
+    }
+    &::-moz-placeholder
+    {
+        color: @mrys;
+        font-size: @mrdx;
+    }
+    &:-ms-input-placeholder
+    {
+        color: @mrys;
+        font-size: @mrdx;
+    }
+}
+.transformX(@tf:-50%)
+{
+    transform: translateX(@tf);
+    -ms-transform: translateX(@tf);
+    -moz-transform: translateX(@tf);
+    -webkit-transform: translateX(@tf);
+    -o-transform: translateX(@tf);
+}
+.transformY(@tf1:-50%)
+{
+    transform: translateY(@tf1);
+    -ms-transform: translateY(@tf1);
+    -moz-transform: translateY(@tf1);
+    -webkit-transform: translateY(@tf1);
+    -o-transform: translateY(@tf1);
+}
+.transform(@tf:-50%,@tf1:-50%)
+{
+    transform: translate(@tf,@tf1);
+    -ms-transform: translate(@tf,@tf1);
+    -moz-transform: translate(@tf,@tf1);
+    -webkit-transform: translate(@tf,@tf1);
+    -o-transform: translate(@tf,@tf1);
+}
+.select(@qc:none)
+{
+    appearance:@qc;
+    -moz-appearance:@qc;
+    -webkit-appearance:@qc;
+    &::-ms-expand
+    {
+        display: @qc;
+    }
+}
+.yingchang
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.duohang(@num:2)
+{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @num;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.border-box{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//变化
+.transition(@ts:2) {
+    transform:scale(@ts);
+    -ms-transform:scale(@ts);
+    -webkit-transform:scale(@ts);
+    -o-transform:scale(@ts);
+    -moz-transform:scale(@ts);
+}
+
+//旋转
+.rotate(@n:2deg)
+{
+    transform:rotate(@n);
+    -ms-transform:rotate(@n); 	/* IE 9 */
+    -moz-transform:rotate(@n); 	/* Firefox */
+    -webkit-transform:rotate(@n); /* Safari 和 Chrome */
+    -o-transform:rotate(@n);
+}
+
+
+//配合下面代码实现变化，鼠标悬停时改变背景颜色。变化对象可以自修改
+//img
+//{
+//    height: 286px;
+//    width: 393px;
+//    transition: all 0.6s;
+//&:hover
+//{
+//    transform:scale(2);//设置缩放比例
+//    -ms-transform:scale(2);
+//    -webkit-transform:scale(2);
+//    -o-transform:scale(2);
+//    -moz-transform:scale(2);
+//}
+//}
+
+//渐变
+.GradientLtr(@jb:#80c1e7,@jb2:#213c7c){
+    //background: -webkit-gradient(linear,left top, right bottom, from(@jb), to(@jb2));
+    background: -webkit-linear-gradient(left, @jb, @jb2);
+    background: -moz-linear-gradient(left, @jb, @jb2);
+    background: -o-linear-gradient(left, @jb, @jb2);
+    background: -ms-linear-gradient(left, @jb, @jb2);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = @jb, endColorstr = @jb2);
+}
+.GradientBtt(@jb:#80c1e7,@jb2:#213c7c){
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(@jb), to(@jb2));
+    background: -webkit-linear-gradient(bottom, @jb, @jb2);
+    background: -moz-linear-gradient(bottom, @jb, @jb2);
+    background: -o-linear-gradient(bottom, @jb, @jb2);
+    background: -ms-linear-gradient(bottom, @jb, @jb2);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr = @jb, endColorstr = @jb2);
+}
+//flex兼容写法
+.flex{
+    display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box; /* Firefox 17- */
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex; /* Firefox 18+ */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+}

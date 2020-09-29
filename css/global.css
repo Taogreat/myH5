@@ -1,0 +1,49 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; }
+
+html,body{ width: 100%;height: 100%;}
+body { font: .19rem 'Microsoft YaHei','Arial','Sumsun','Helvetica';background: #F5F5F5;}
+
+*{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+ul, ol{ list-style: none; }
+
+a,a:hover { text-decoration: none; }
+
+a img { border: none; }
+
+i ,s,b,em,u{ font-style: normal; font-weight: normal; text-decoration: none; }
+
+input, textarea, button, select, input:focus, textarea:focus{ outline: none; -webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none;font-family: "Microsoft YaHei"}
+
+textarea{ resize: none; overflow: hidden; }
+
+table{ border-collapse: collapse; border-spacing:0;}
+
+select, input[type=button], input[type=submit], button, input[type=reset]{cursor: pointer; -webkit-appearance: none;font-family: "Microsoft YaHei"}
+
+.container-fluid{display: block; margin: 0 auto; width: 100%; max-width: 750px; min-width: 320px; position: relative;}
+.container-fluid:before{ content: ''; display: block; clear: both; height:0; }
+.container-fluid:after{ content: ''; display: block; clear: both; height:0; }
+
+.fl{float: left;}
+.fr{float: right;}
+.cf:before,.cf:after {content:"";display:table;}
+.cf:after {clear:both;overflow:hidden;}
+.cf{zoom:1; /* IE < 8 */}
+
+input,textarea,button,select,input:focus,textarea:focus
+{
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+input[type="checkbox"],input[type="radio"]
+{
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	display: none;
+}
