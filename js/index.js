@@ -1,5 +1,9 @@
 
-$(function(){
+window.onload=function(){
+    animation()
+}
+function animation(){
+	$('#loading').fadeOut()
 	let length=$('.content').children().length
 	let i=0
 	let interval=setInterval(function(){
@@ -31,7 +35,5 @@ $(function(){
 			},1000)
 		},2000)
 	
-		
 	})
-})
- 
+}
