@@ -57,7 +57,7 @@ function animation(){
 $(function(){
 	let i=0
 	let imgArr=['bg.jpg','img01.jpg','img02.gif','img03.jpg']
-	let total=imgArr.length+2
+	let total=imgArr.length+1 //加1是audio只有一个
 	imgArr.forEach(function(item,index){
 		let img=new Image()
 		img.src=`./img/${item}`
@@ -67,11 +67,11 @@ $(function(){
 			}
 		}
 	})
-	$('#mp4').on('canplay',function(){
-		if(++i/total==1){
-			animation()
-		}
-	})
+	// $('#mp4').on('canplay',function(){
+	// 	if(++i/total==1){
+	// 		animation()
+	// 	}
+	// })
 	$('#music').on('canplay',function(){
 		if(++i/total==1){
 			animation()
